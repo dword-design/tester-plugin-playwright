@@ -1,12 +1,12 @@
 <!-- TITLE/ -->
-# tester-plugin-playwright
+# @dword-design/tester-plugin-playwright
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
   <p>
-    <a href="https://npmjs.org/package/tester-plugin-playwright">
+    <a href="https://npmjs.org/package/@dword-design/tester-plugin-playwright">
       <img
-        src="https://img.shields.io/npm/v/tester-plugin-playwright.svg"
+        src="https://img.shields.io/npm/v/@dword-design/tester-plugin-playwright.svg"
         alt="npm version"
       >
     </a><img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/tester-plugin-playwright/actions">
@@ -58,10 +58,10 @@
 
 ```bash
 # npm
-$ npm install tester-plugin-playwright
+$ npm install @dword-design/tester-plugin-playwright
 
 # Yarn
-$ yarn add tester-plugin-playwright
+$ yarn add @dword-design/tester-plugin-playwright
 ```
 <!-- /INSTALL -->
 

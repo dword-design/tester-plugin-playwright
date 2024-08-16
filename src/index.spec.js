@@ -62,9 +62,7 @@ export default tester(
       test: () =>
         expect(
           execaCommand('mocha --ui exports --timeout 80000 index.spec.js'),
-        ).rejects.toThrow(
-          'TimeoutError: Timed out after 1 ms while waiting for the WS endpoint URL to appear in stdout!',
-        ),
+        ).rejects.toThrow('Timeout 1ms exceeded.'),
       testFile: endent`
         import tester from '${packageName`@dword-design/tester`}'
   
@@ -157,7 +155,7 @@ export default tester(
             try {
               await nuxtDevReady()
               await this.page.goto('http://localhost:3000')
-              const $foo = await this.page.waitForSelector('.foo')
+              const $foo = await this.page.waitForSelector('.foo', { state: 'attached' })
               expect(await $foo.evaluate(el => window.getComputedStyle(el).color)).toEqual('rgb(255, 0, 0)')
             } finally {
               await kill(nuxt.pid)
@@ -191,7 +189,7 @@ export default tester(
               await nuxtDevReady()
               await this.page.goto('http://localhost:3000')
               const $foo = await this.page.waitForSelector('.foo')
-              expect(await $foo.evaluate(el => el.innerText)).toEqual('Hello world')
+              expect(await $foo.evaluate(_ => _.innerText)).toEqual('Hello world')
             } finally {
               await kill(nuxt.pid)
             }

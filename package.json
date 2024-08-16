@@ -28,14 +28,17 @@
     "@dword-design/tester-plugin-tmp-dir": "^2.1.26",
     "depcheck-package-name": "^3.0.1",
     "execa": "^9.3.1",
+    "nuxt": "^3.12.4",
     "nuxt-dev-ready": "^3.0.0",
     "output-files": "^2.0.32",
     "playwright": "^1.46.1",
     "playwright-chromium": "^1.46.1",
+    "sass": "^1.77.8",
     "tree-kill-promise": "^3.0.14"
   },
   "peerDependencies": {
-    "playwright": "^1"
+    "playwright": "^1",
+    "playwright-chromium": "^1"
   },
   "engines": {
     "node": ">=18"

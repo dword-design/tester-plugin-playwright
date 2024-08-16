@@ -2,7 +2,8 @@
   "name": "@dword-design/node",
   "depcheckConfig": {
     "ignoreMatches": [
-      "playwright-chromium"
+      "playwright-chromium",
+      "sass"
     ]
   }
 }

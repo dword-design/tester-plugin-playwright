@@ -48,7 +48,8 @@ export default tester(
               }
             },
           }, [
-            self({ launchOptions: {
+            self({ isPersistentContext: true, launchOptions: {
+              headless: false,
               args: [
                 '--load-extension=dist',
                 '--disable-extensions-except=dist',

@@ -21,6 +21,9 @@
     "prepublishOnly": "base prepublishOnly",
     "test": "base test"
   },
+  "dependencies": {
+    "deepmerge": "^4.3.1"
+  },
   "devDependencies": {
     "@dword-design/base": "^11.1.2",
     "@dword-design/functions": "^6.0.0",

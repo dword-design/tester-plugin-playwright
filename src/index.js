@@ -1,7 +1,16 @@
+import deepmerge from 'deepmerge';
 import { chromium } from 'playwright';
 
 export default (options = {}) => {
-  options = { launchOptions: {}, ...options };
+  options = deepmerge(
+    {
+      isPersistentContext: false,
+      launchOptions: { args: [] },
+      userDataDir: '',
+    },
+    options,
+  );
+
   return {
     async afterEach() {
       if (this.browser) {
@@ -10,7 +19,13 @@ export default (options = {}) => {
       }
     },
     async beforeEach() {
-      this.browser = await chromium.launch(options.launchOptions);
+      this.browser = await (options.isPersistentContext
+        ? chromium.launchPersistentContext(
+            options.userDataDir,
+            options.launchOptions,
+          )
+        : chromium.launch(options.launchOptions));
+
       this.page = await this.browser.newPage();
     },
   };

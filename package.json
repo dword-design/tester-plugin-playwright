@@ -1,0 +1,46 @@
+{
+  "name": "@dword-design/tester-plugin-playwright",
+  "version": "1.0.0",
+  "repository": "dword-design/tester-plugin-playwright",
+  "funding": "https://github.com/sponsors/dword-design",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "checkUnknownFiles": "base checkUnknownFiles",
+    "commit": "base commit",
+    "depcheck": "base depcheck",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^11.1.2",
+    "@dword-design/functions": "^6.0.0",
+    "@dword-design/tester": "^2.0.19",
+    "@dword-design/tester-plugin-tmp-dir": "^2.1.26",
+    "depcheck-package-name": "^3.0.1",
+    "execa": "^9.3.1",
+    "nuxt-dev-ready": "^3.0.0",
+    "output-files": "^2.0.32",
+    "playwright": "^1.46.1",
+    "playwright-chromium": "^1.46.1",
+    "tree-kill-promise": "^3.0.14"
+  },
+  "peerDependencies": {
+    "playwright": "^1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

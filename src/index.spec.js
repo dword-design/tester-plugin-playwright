@@ -49,8 +49,8 @@ export default tester(
             },
           }, [
             self({ isPersistentContext: true, launchOptions: {
-              headless: false,
               args: [
+                '--headless=new',
                 '--load-extension=dist',
                 '--disable-extensions-except=dist',
               ],

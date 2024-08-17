@@ -44,7 +44,7 @@ export default tester(
                 await this.page.goto('http://localhost:3000')
                 await new Promise(resolve => setTimeout(resolve, 2000))
                 //expect(await this.page.evaluate(() => [...document.body.classList])).toContain('foo')
-                await this.page.waitForSelector('body.foo')
+                await this.page.waitForSelector('body.foo', { state: 'attached' })
               } finally {
                 await kill(nuxt.pid)
               }

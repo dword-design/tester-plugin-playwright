@@ -1,5 +1,6 @@
 {
   "name": "@dword-design/node",
+  "windows": false,
   "depcheckConfig": {
     "ignoreMatches": [
       "playwright-chromium",
